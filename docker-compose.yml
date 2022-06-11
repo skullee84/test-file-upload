@@ -1,0 +1,12 @@
+version: '3'
+services:
+  nginx-file-local:
+    image: library/nginx
+    container_name: nginx-file-local
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d
+
